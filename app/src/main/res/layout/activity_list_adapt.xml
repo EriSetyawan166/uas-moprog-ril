@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <TableRow
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:text="Nis"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="120dp"
+                />
+
+            <TextView
+                android:text="Nama"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="120dp"
+                />
+
+            <TextView
+                android:text="Point"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="120dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txtNis"
+                android:text="317"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="120dp"
+                />
+
+            <TextView
+                android:id="@+id/txtNama"
+                android:text="Eko"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="120dp"
+                />
+
+            <TextView
+                android:id="@+id/txtPoin"
+                android:text="100"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="120dp"
+                />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

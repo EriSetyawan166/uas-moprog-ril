@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Daftar Pelanggaran Siswa</string>
+    <string-array name="pelanggaran">
+        <item>tawuran</item>
+        <item>telat</item>
+        <item>bolos</item>
+    </string-array>
+</resources>
