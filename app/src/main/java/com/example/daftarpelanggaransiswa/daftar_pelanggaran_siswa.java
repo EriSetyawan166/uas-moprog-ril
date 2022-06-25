@@ -23,6 +23,8 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
     String[] nis;
     String[] nama;
     String[] poin;
+    String[] tempat;
+    String[] data;
     BufferedInputStream is;
     String line = null;
     String result = null;
@@ -63,6 +65,7 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
             }
             is.close();
             result=sb.toString();
+            Log.d("Hasil = ", result);
 
 
         }catch (Exception ex){
@@ -72,21 +75,40 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
         }
 
         try{
-            JSONArray ja = new JSONArray(result);
-            JSONObject jo = null;
-            nis=new String[ja.length()];
-            nama=new String[ja.length()];
-            poin=new String[ja.length()];
 
-            for(int i=0;i<ja.length();i++){
-                jo = ja.getJSONObject(i);
-                nis[i]=jo.getString("nis");
-                nama[i]=jo.getString("nama");
-                poin[i]=jo.getString("poin");
-
-//                Log.d("yeyyy = ", nim[i]);
-
+            tempat = result.split(":");
+            nis=new String[tempat.length];
+            nama=new String[tempat.length];
+            poin=new String[tempat.length];
+            int panjang = tempat.length;
+            Log.d("hasil split = ", tempat[3]);
+            Log.d("Panjang tempat", String.valueOf(panjang));
+//            int j = 0;
+            for(int i=0; i< tempat.length;i++)
+            {
+                data = tempat[i].split("#");
+                nis[i] = data[1];
+                nama[i] = data[2];
+                poin[i] = data[5];
             }
+
+
+//            JSONArray ja = new JSONArray(result);
+//
+//            JSONObject jo = null;
+//            nis=new String[ja.length()];
+//            nama=new String[ja.length()];
+//            poin=new String[ja.length()];
+//
+//            for(int i=0;i<ja.length();i++){
+//                jo = ja.getJSONObject(i);
+//                nis[i]=jo.getString("nis");
+//                nama[i]=jo.getString("nama");
+//                poin[i]=jo.getString("poin");
+//
+//                Log.d("yeyyy = ", nis[i]);
+//
+//            }
         }catch (Exception ex){
             ex.printStackTrace();
             Log.d("lah",ex.toString());
