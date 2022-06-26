@@ -80,9 +80,9 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
             nis=new String[tempat.length];
             nama=new String[tempat.length];
             poin=new String[tempat.length];
-            int panjang = tempat.length;
-            Log.d("hasil split = ", tempat[3]);
-            Log.d("Panjang tempat", String.valueOf(panjang));
+//            int panjang = tempat.length;
+//            Log.d("hasil split = ", tempat[3]);
+//            Log.d("Panjang tempat", String.valueOf(panjang));
 //            int j = 0;
             for(int i=0; i< tempat.length;i++)
             {

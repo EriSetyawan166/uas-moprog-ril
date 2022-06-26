@@ -9,34 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp">
-        <TableRow
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:text="Nis"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:layout_width="120dp"
-                />
-
-            <TextView
-                android:text="Nama"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:layout_width="120dp"
-                />
-
-            <TextView
-                android:text="Point"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:layout_width="120dp"
-                />
-        </TableRow>
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
 
         <TableRow
             android:gravity="center_horizontal">
