@@ -25,6 +25,9 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
     String[] poin;
     String[] tempat;
     String[] data;
+    String[] ket;
+    String[] jenpel;
+    String[] id;
     BufferedInputStream is;
     String line = null;
     String result = null;
@@ -41,7 +44,7 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
 
         StrictMode.setThreadPolicy((new StrictMode.ThreadPolicy.Builder().permitNetwork().build()));
         ambilData();
-        listAdapt clv = new listAdapt(this, nis, nama, poin);
+        listAdapt clv = new listAdapt(this, nis, nama, poin, ket, jenpel, id);
         lv.setAdapter(clv);
     }
 
@@ -80,6 +83,9 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
             nis=new String[tempat.length];
             nama=new String[tempat.length];
             poin=new String[tempat.length];
+            ket = new String[tempat.length];
+            jenpel = new String[tempat.length];
+            id = new String[tempat.length];
 //            int panjang = tempat.length;
 //            Log.d("hasil split = ", tempat[3]);
 //            Log.d("Panjang tempat", String.valueOf(panjang));
@@ -90,6 +96,9 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
                 nis[i] = data[1];
                 nama[i] = data[2];
                 poin[i] = data[5];
+                ket[i] = data[4];
+                jenpel[i] = data[3];
+                id[i] = data[0];
             }
 
 

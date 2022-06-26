@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.daftarpelanggaransiswa.helper.simpanhelper;
 
@@ -37,6 +38,20 @@ public class InputPelanggaran extends AppCompatActivity {
         String nama = inputNama.getText().toString();
         String ket = inputKeterangan.getText().toString();
         String jenpel = spnPelanggaran.getSelectedItem().toString();
+
+        if(inputNis.getText().length() == 0){
+            Toast.makeText(InputPelanggaran.this,"NIS masih Kosong", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(inputNama.getText().length() == 0){
+            Toast.makeText(InputPelanggaran.this,"Nama masih Kosong", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(jenpel.equals("Pilih Jenis Pelanggaran")){
+            Toast.makeText(InputPelanggaran.this,"Jenis Pelanggaran Belum Dipilih", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         Log.d("Isi = ",nis);
         Log.d("Isi = ", nama);

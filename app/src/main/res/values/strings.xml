@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Daftar Pelanggaran Siswa</string>
     <string-array name="pelanggaran">
+        <item>Pilih Jenis Pelanggaran</item>
         <item>tawuran</item>
         <item>telat</item>
         <item>bolos</item>
+        <item>merokok</item>
+        <item>membuat kekacauan</item>
+        <item>merusak fasilitas</item>
+
     </string-array>
 </resources>

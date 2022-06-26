@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputPelanggaran"
+    android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:paddingLeft="20dp">
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    tools:context=".ActivityDetail">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Input Data Pelanggaran Baru"
+        android:text="Data Siswa"
         android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
@@ -20,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nis"
@@ -30,11 +32,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/judul"
         app:layout_constraintVertical_bias="0.050000012">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputNis"
+            android:id="@+id/tampilNis"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Masukkan NIS"
@@ -62,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Masukkan Nama"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '" />
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '"
             android:textColorHint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +74,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spnPelanggaran"
+        android:id="@+id/tampilPelanggaran"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
@@ -90,11 +92,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnPelanggaran"
+        app:layout_constraintTop_toBottomOf="@+id/tampilPelanggaran"
         android:layout_marginTop="30dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputKeterangan"
+            android:id="@+id/tampilKet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Masukkan Keterangan"
@@ -107,20 +109,62 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSimpan"
+        android:id="@+id/btnUbah"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:onClick="btnSimpan"
-        android:text="Simpan"
+        android:onClick="btnUbah"
+        android:text="Ubah"
         android:textAllCaps="false"
         android:textSize="20dp"
-        app:backgroundTint="?attr/colorSecondary"
+        app:backgroundTint="@color/yellow"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/keterangan"
         app:layout_constraintVertical_bias="0.309" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHapus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:onClick="btnHapus"
+        android:text="Hapus"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:backgroundTint="@color/red"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUbah"
+        app:layout_constraintVertical_bias="0.166"
+        />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/id"-->
+<!--        style="@style/LoginTextInputLayoutStyle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnHapus"-->
+<!--        android:alpha="0">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/inputId"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:hint="Masukkan Nama"-->
+<!--            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

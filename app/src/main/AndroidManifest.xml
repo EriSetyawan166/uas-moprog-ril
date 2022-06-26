@@ -14,6 +14,9 @@
         android:theme="@style/Theme.DaftarPelanggaranSiswa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ActivityDetail"
+            android:exported="false" />
+        <activity
             android:name=".listAdapt"
             android:exported="false" />
         <activity
@@ -21,11 +24,12 @@
             android:exported="false" />
         <activity
             android:name=".InputPelanggaran"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Menu" />
         <activity
             android:name=".utama"
             android:exported="false"
-            android:theme="@style/Theme.Menu"/>
+            android:theme="@style/Theme.Menu" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

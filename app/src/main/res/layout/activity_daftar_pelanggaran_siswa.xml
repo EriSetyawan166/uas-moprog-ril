@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".daftar_pelanggaran_siswa">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Pelanggaran Siswa"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
