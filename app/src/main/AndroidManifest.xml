@@ -24,7 +24,8 @@
             android:exported="false" />
         <activity
             android:name=".utama"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Menu"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

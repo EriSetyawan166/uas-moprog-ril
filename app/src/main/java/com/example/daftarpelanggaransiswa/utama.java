@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.example.daftarpelanggaransiswa.InputPelanggaran;
 
 public class utama extends AppCompatActivity {
-    private Button btnInput, btnLihat;
+    private Button btnInput, btnLihat, btnTest;
     private Context context;
 
     @Override
@@ -30,6 +30,11 @@ public class utama extends AppCompatActivity {
 
     public void btnLihat(View view){
         Intent intent = new Intent(utama.this, daftar_pelanggaran_siswa.class);
+        startActivity(intent);
+    }
+
+    public void btnTest(View view){
+        Intent intent = new Intent(utama.this, InputPelanggaran.class);
         startActivity(intent);
     }
 }

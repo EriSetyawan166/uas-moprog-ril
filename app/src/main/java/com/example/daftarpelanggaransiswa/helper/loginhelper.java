@@ -90,7 +90,7 @@ public class loginhelper extends AsyncTask<String,Void,String> {
         }
         else{
             Log.d("Status = ", "Gagal");
-            Toast.makeText(context, "Login Gagal", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Username/Password Salah", Toast.LENGTH_SHORT).show();
         }
     }
 }
