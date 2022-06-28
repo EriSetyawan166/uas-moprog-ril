@@ -2,29 +2,25 @@ package com.example.daftarpelanggaransiswa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 
-public class daftar_pelanggaran_siswa extends AppCompatActivity {
+public class CariActivity extends AppCompatActivity {
 
-    String urladd="http://192.168.252.29/DataPelanggaran/tampil.php";
+    String urlCari = "http://localhost/DataPelanggaran/cari.php?";
+
     String[] nis;
     String[] nama;
     String[] poin;
@@ -36,31 +32,35 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
     BufferedInputStream is;
     String line = null;
     String result = null;
+    EditText txtcari2;
 
     ListView lv, lp;
-
-    private TextView tvnama;
-    private EditText txtcari;
-    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daftar_pelanggaran_siswa);
+        setContentView(R.layout.activity_cari);
 
-        txtcari = (EditText) findViewById(R.id.txtCari);
+        txtcari2 = (EditText) findViewById(R.id.txtcari2);
 
-        lv = (ListView) findViewById(R.id.listterakhir);
+
+        lv = (ListView) findViewById(R.id.listterakhir2);
 
         StrictMode.setThreadPolicy((new StrictMode.ThreadPolicy.Builder().permitNetwork().build()));
         ambilData();
-        listAdapt clv = new listAdapt(this, nis, nama, poin, ket, jenpel, id);
+        listadaptcari clv = new listadaptcari(this, nis, nama, poin, ket, jenpel, id);
         lv.setAdapter(clv);
     }
 
     private void ambilData(){
         try{
-            URL url=new URL(urladd);
+
+            Intent i = getIntent();
+            Bundle b = i.getExtras();
+            String nama = (String) b.get("nama");
+            Log.d("Nama = ", nama);
+            String urlCari= "http://192.168.252.29/DataPelanggaran/cari.php?nama=" + nama;
+            URL url=new URL(urlCari);
             HttpURLConnection con =(HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             is=new BufferedInputStream(con.getInputStream());
@@ -134,12 +134,13 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
         }
     }
 
-    public void btnCari(View view) {
-        String cari = txtcari.getText().toString();
-
+    public void btnCari(View view){
+        String cari = txtcari2.getText().toString();
+        Log.d("Cari = ", cari);
 
         try {
-            cari = txtcari.getText().toString();
+            cari = txtcari2.getText().toString();
+            Log.d("Cari = ", cari);
             String urlcari = "http://192.168.252.29/DataPelanggaran/login.php?nama=" + cari;
             URL url = new URL(urlcari);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -214,7 +215,7 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
         }
 
 
-        Intent intent = new Intent(daftar_pelanggaran_siswa.this, CariActivity.class);
+        Intent intent = new Intent(CariActivity.this, CariActivity.class);
         intent.putExtra("nama", cari);
         startActivity(intent);
     }

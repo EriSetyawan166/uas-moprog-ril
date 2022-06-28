@@ -33,14 +33,14 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:hint="Masukkan nama"
-                android:id="@+id/txtCari"/>
+                android:id="@+id/txtcari2"
+                />
 
             <Button
                 android:layout_marginLeft="20dp"
                 android:backgroundTint="@color/blue"
                 android:text="Cari"
                 android:onClick="btnCari"
-
                 />
 
         </TableRow>
@@ -91,7 +91,7 @@
     </TableLayout>
 
     <ListView
-        android:id="@+id/listterakhir"
+        android:id="@+id/listterakhir2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="1dp"
