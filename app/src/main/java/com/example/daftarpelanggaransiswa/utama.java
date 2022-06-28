@@ -33,8 +33,8 @@ public class utama extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void btnTest(View view){
-        Intent intent = new Intent(utama.this, InputPelanggaran.class);
+    public void btnDaftar2(View view){
+        Intent intent = new Intent(utama.this, RegistActivity.class);
         startActivity(intent);
     }
 }

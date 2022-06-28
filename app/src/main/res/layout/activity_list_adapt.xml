@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/mainLayout">
+    android:id="@+id/mainLayout"
+    >
 
     <TableLayout
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
             <TextView
                 android:id="@+id/txtNis"
                 android:text="317"
+                android:fontFamily="@font/ptsansbold"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -35,6 +37,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:layout_width="120dp"
+                android:fontFamily="@font/ptsansbold"
                 />
 
             <TextView
@@ -43,6 +46,7 @@
                 android:textSize="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
+                android:fontFamily="@font/ptsansbold"
                 android:textAlignment="center"
                 android:layout_width="120dp"
                 />

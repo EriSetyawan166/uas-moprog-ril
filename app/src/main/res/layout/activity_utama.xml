@@ -6,7 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".utama">
 
+    <TextView
+        android:fontFamily="@font/ptsansbold"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Pelanggaran Siswa Mobile"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/vector_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
@@ -18,18 +43,27 @@
         app:layout_constraintEnd_toEndOf="@+id/materialCardView3"
         app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:layout_constraintVertical_bias="0.046">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/btnDaftar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:backgroundTint="@color/kosong"
+                android:onClick="btnDaftar2" />
+
+
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_menu"
+                android:src="@drawable/vector_daftar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="MENU DAFTAR"
+                android:fontFamily="@font/ptsansbold"
                 android:textColor="@color/black"
                 android:textSize="13dp"
                 android:textStyle="bold"
@@ -64,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:layout_constraintVertical_bias="0.046">
 
         <Button
@@ -83,7 +118,7 @@
                 android:id="@+id/imageView5"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_daftar"
+                android:src="@drawable/menu_lihat"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +131,7 @@
                 android:layout_marginTop="8dp"
                 android:text="LIHAT PELANGGARAN"
                 android:textColor="@color/black"
+                android:fontFamily="@font/ptsansbold"
                 android:textSize="11dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -136,12 +172,12 @@
                 android:id="@+id/imageView2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_add"
+                android:src="@drawable/menu_tambah"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.228" />
+                app:layout_constraintVertical_bias="0.32" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -150,6 +186,7 @@
                 android:text="INPUT PELANGGARAN"
                 android:textColor="@color/black"
                 android:textSize="11dp"
+                android:fontFamily="@font/ptsansbold"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -179,7 +216,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_help"
+                android:src="@drawable/jempol"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -194,6 +231,7 @@
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 android:textStyle="bold"
+                android:fontFamily="@font/ptsansbold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"

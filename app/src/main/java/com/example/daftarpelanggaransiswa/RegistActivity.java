@@ -43,7 +43,7 @@ public class RegistActivity extends AppCompatActivity {
         }
 
         if (! passlagi.equals(pass)){
-            Toast.makeText(this, "Password salah", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Masukkan Ulang Password Dengan Benar", Toast.LENGTH_SHORT).show();
             return;
         }
 

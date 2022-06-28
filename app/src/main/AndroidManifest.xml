@@ -28,11 +28,11 @@
         <activity
             android:name=".InputPelanggaran"
             android:exported="false"
-            android:theme="@style/Theme.Menu" />
+             />
         <activity
             android:name=".utama"
             android:exported="false"
-            android:theme="@style/Theme.Menu" />
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">

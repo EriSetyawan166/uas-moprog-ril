@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".daftar_pelanggaran_siswa">
+    tools:context=".daftar_pelanggaran_siswa"
+    >
 
     <TextView
+        android:fontFamily="@font/ptsansbold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Daftar Pelanggaran Siswa"
@@ -29,6 +31,7 @@
 
             <TextView
                 android:text="Nis"
+                android:fontFamily="@font/ptsansbold"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -41,6 +44,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
+                android:fontFamily="@font/ptsansbold"
                 android:layout_width="120dp"
                 android:textColor="@color/black"
                 />
@@ -50,6 +54,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
+                android:fontFamily="@font/ptsansbold"
                 android:layout_width="120dp"
                 android:textColor="@color/black"
                 />

@@ -5,122 +5,144 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InputPelanggaran"
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp">
+    >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Input Data Pelanggaran Baru"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        android:textStyle="bold"
+    <ImageView
+        android:layout_width="221dp"
+        android:layout_height="131dp"
+        android:src="@drawable/vector_tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.050000012" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nis"
-        style="@style/LoginTextInputLayoutStyle"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.050000012">
+        android:layout_height="match_parent"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputNis"
+
+        <TextView
+            android:id="@+id/textView2"
+            android:fontFamily="@font/ptsansbold"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Input Data Pelanggaran"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.004"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06999999" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nis"
+            style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Masukkan NIS"
-            android:inputType="number"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.13">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan NIS"
+                android:inputType="number"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nama"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nis">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNama"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan Nama"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '" />
             android:textColorHint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nama"
-        style="@style/LoginTextInputLayoutStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nis">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputNama"
+        <Spinner
+            android:id="@+id/spnPelanggaran"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Masukkan Nama"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '" />
-            android:textColorHint="@color/black"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/style_spinner"
+            android:entries="@array/pelanggaran"
+            android:verticalScrollbarPosition="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/keterangan"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnPelanggaran"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan Keterangan"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="btnSimpan"
+            android:text="Simpan"
+            android:fontFamily="@font/ptsansbold"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            app:backgroundTint="?attr/colorSecondary"
+            app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/keterangan"
+            app:layout_constraintVertical_bias="0.309" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Spinner
-        android:id="@+id/spnPelanggaran"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/style_spinner"
-        android:entries="@array/pelanggaran"
-        android:verticalScrollbarPosition="right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/keterangan"
-        style="@style/LoginTextInputLayoutStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnPelanggaran"
-        android:layout_marginTop="30dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputKeterangan"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Masukkan Keterangan"
-            android:textColorHint="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSimpan"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:onClick="btnSimpan"
-        android:text="Simpan"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        app:backgroundTint="?attr/colorSecondary"
-        app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keterangan"
-        app:layout_constraintVertical_bias="0.309" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

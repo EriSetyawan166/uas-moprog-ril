@@ -4,167 +4,190 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp"
     tools:context=".ActivityDetail">
 
-    <TextView
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Data Siswa"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        android:textStyle="bold"
+    <ImageView
+        android:layout_width="206dp"
+        android:layout_height="146dp"
+        android:src="@drawable/menu_detail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nis"
-        style="@style/LoginTextInputLayoutStyle"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judul"
-        app:layout_constraintVertical_bias="0.050000012">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tampilNis"
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ptsansbold"
+            android:text="Data Siswa"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.065" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nis"
+            style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Masukkan NIS"
-            android:inputType="number"
-            android:textColorHint="@color/black"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/judul"
+            app:layout_constraintVertical_bias="0.13999999">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tampilNis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan NIS"
+                android:inputType="number"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nama"
-        style="@style/LoginTextInputLayoutStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nis">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputNama"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nama"
+            style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Masukkan Nama"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '"
-            android:textColorHint="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nis">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNama"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '"
+                android:hint="Masukkan Nama"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/tampilPelanggaran"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/style_spinner"
+            android:entries="@array/pelanggaran"
+            android:verticalScrollbarPosition="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/keterangan"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tampilPelanggaran">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tampilKet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan Keterangan"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUbah"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/ptsansbold"
+            android:onClick="btnUbah"
+            android:text="Ubah"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            app:backgroundTint="@color/yellow"
+            app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/keterangan"
+            app:layout_constraintVertical_bias="0.309" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Spinner
-        android:id="@+id/tampilPelanggaran"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/style_spinner"
-        android:entries="@array/pelanggaran"
-        android:verticalScrollbarPosition="right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/keterangan"
-        style="@style/LoginTextInputLayoutStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tampilPelanggaran"
-        android:layout_marginTop="30dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tampilKet"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHapus"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Masukkan Keterangan"
-            android:textColorHint="@color/black"
+            android:layout_height="60dp"
+            android:fontFamily="@font/ptsansbold"
+            android:onClick="btnHapus"
+            android:text="Hapus"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            app:backgroundTint="@color/red"
+            app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btnUbah"
+            app:layout_constraintVertical_bias="0.166" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/id"-->
+        <!--        style="@style/LoginTextInputLayoutStyle"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="30dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/btnHapus"-->
+        <!--        android:alpha="0">-->
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnUbah"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:onClick="btnUbah"
-        android:text="Ubah"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        app:backgroundTint="@color/yellow"
-        app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keterangan"
-        app:layout_constraintVertical_bias="0.309" />
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:id="@+id/inputId"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:hint="Masukkan Nama"-->
+        <!--            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '"-->
+        <!--            android:textColorHint="@color/black"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnHapus"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:onClick="btnHapus"
-        android:text="Hapus"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        app:backgroundTint="@color/red"
-        app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUbah"
-        app:layout_constraintVertical_bias="0.166"
-        />
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:id="@+id/id"-->
-<!--        style="@style/LoginTextInputLayoutStyle"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btnHapus"-->
-<!--        android:alpha="0">-->
-
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:id="@+id/inputId"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:hint="Masukkan Nama"-->
-<!--            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '"-->
-<!--            android:textColorHint="@color/black"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
