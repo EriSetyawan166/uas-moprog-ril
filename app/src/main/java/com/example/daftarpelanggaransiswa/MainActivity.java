@@ -2,11 +2,14 @@ package com.example.daftarpelanggaransiswa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.daftarpelanggaransiswa.helper.loginhelper;
 
@@ -21,6 +24,7 @@ import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView txtregis;
     private EditText txtUser, txtPass;
     private Button btnLogin;
     String user, pass;
@@ -32,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         txtUser =(EditText)findViewById(R.id.editTextUsername);
         txtPass =(EditText) findViewById(R.id.editTextPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
+        txtregis = (TextView) findViewById(R.id.txtregis);
+
+        txtregis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RegistActivity.class);
+                startActivity(intent);
+            }
+        });
 
         user=pass="";
 
@@ -42,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         String pass = txtPass.getText().toString();
         new loginhelper(this).execute(user,pass);
     }
+
+
 
 
 }
