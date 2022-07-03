@@ -48,6 +48,8 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_pelanggaran_siswa);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         txtcari = (EditText) findViewById(R.id.txtCari);
 
         lv = (ListView) findViewById(R.id.listterakhir);

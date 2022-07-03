@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Daftar Pelanggaran Siswa</string>
+    <string name="app_name"></string>
     <string-array name="pelanggaran">
         <item>Pilih Jenis Pelanggaran</item>
         <item>tawuran</item>
