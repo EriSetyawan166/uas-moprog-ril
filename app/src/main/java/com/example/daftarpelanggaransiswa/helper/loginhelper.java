@@ -53,7 +53,7 @@ public class loginhelper extends AsyncTask<String,Void,String> {
             //Request
             String username = (String) arg0[0];
             String password = (String) arg0[1];
-            String link = "http://192.168.252.29/DataPelanggaran/login.php?username=" + username + "&password=" + password;
+            String link = "http://192.168.140.29/DataPelanggaran/login.php?username=" + username + "&password=" + password;
             Log.d("Url = ", link);
             HttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet();

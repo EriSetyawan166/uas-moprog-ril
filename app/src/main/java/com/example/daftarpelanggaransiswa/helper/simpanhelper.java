@@ -38,7 +38,7 @@ public class simpanhelper extends AsyncTask<String, Void, String> {
             String jenpel = (String) arg[2];
             String ket = (String) arg[3];
 
-            String link = "http://192.168.252.29/DataPelanggaran/simpanData.php?nis=" + nis + "&nama=" + URLEncoder.encode(nama, "utf-8") + "&jenpel=" + URLEncoder.encode(jenpel, "utf-8") + "&keterangan=" + URLEncoder.encode(ket, "utf-8");
+            String link = "http://192.168.140.29/DataPelanggaran/simpanData.php?nis=" + nis + "&nama=" + URLEncoder.encode(nama, "utf-8") + "&jenpel=" + URLEncoder.encode(jenpel, "utf-8") + "&keterangan=" + URLEncoder.encode(ket, "utf-8");
             Log.d("url =", link.toString());
             HttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet();

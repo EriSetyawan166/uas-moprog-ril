@@ -38,7 +38,7 @@ public class hapushelper extends AsyncTask<String, Void, String> {
         try {
             String id = (String) arg[0];
 
-            String link = "http://192.168.252.29/DataPelanggaran/hapus.php?id=" + id;
+            String link = "http://192.168.140.29/DataPelanggaran/hapus.php?id=" + id;
             Log.d("url =", link.toString());
             HttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet();

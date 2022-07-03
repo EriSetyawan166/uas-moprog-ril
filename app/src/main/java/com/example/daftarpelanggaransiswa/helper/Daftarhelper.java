@@ -39,7 +39,7 @@ public class Daftarhelper extends AsyncTask <String, Void, String> {
             String username = (String) arg[0];
             String password = (String) arg[1];
 
-            String link = "http://192.168.252.29/DataPelanggaran/daftar.php?username=" + username + "&password=" + password;
+            String link = "http://192.168.140.29/DataPelanggaran/daftar.php?username=" + username + "&password=" + password;
             Log.d("url =", link.toString());
             HttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet();

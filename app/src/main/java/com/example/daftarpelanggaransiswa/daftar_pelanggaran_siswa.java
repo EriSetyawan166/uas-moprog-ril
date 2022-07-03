@@ -24,7 +24,7 @@ import java.net.URLEncoder;
 
 public class daftar_pelanggaran_siswa extends AppCompatActivity {
 
-    String urladd="http://192.168.252.29/DataPelanggaran/tampil.php";
+//    String urladd="http://192.168.140.29/DataPelanggaran/tampil.php";
     String[] nis;
     String[] nama;
     String[] poin;
@@ -60,10 +60,29 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
 
     private void ambilData(){
         try{
-            URL url=new URL(urladd);
-            HttpURLConnection con =(HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
-            is=new BufferedInputStream(con.getInputStream());
+            String cari = "";
+            try {
+                Intent i = getIntent();
+                Bundle b = i.getExtras();
+                cari = (String) b.get("nama");
+                Log.d("nama = ", cari);
+                String urladd="http://192.168.140.29/DataPelanggaran/cari.php?nama=" + cari;
+                URL url=new URL(urladd);
+                HttpURLConnection con =(HttpURLConnection) url.openConnection();
+                con.setRequestMethod("GET");
+                is=new BufferedInputStream(con.getInputStream());
+            }
+
+            catch (Exception ex){
+                String urladd="http://192.168.140.29/DataPelanggaran/cari.php?nama=" + cari;
+                URL url=new URL(urladd);
+                HttpURLConnection con =(HttpURLConnection) url.openConnection();
+                con.setRequestMethod("GET");
+                is=new BufferedInputStream(con.getInputStream());
+            }
+
+
+
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -136,11 +155,12 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
 
     public void btnCari(View view) {
         String cari = txtcari.getText().toString();
-
+        Log.d("Cari = ", cari);
 
         try {
             cari = txtcari.getText().toString();
-            String urlcari = "http://192.168.252.29/DataPelanggaran/login.php?nama=" + cari;
+            String urlcari = "http://192.168.140.29/DataPelanggaran/cari.php?nama=" + cari;
+            Log.d("url=", urlcari);
             URL url = new URL(urlcari);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
@@ -214,7 +234,7 @@ public class daftar_pelanggaran_siswa extends AppCompatActivity {
         }
 
 
-        Intent intent = new Intent(daftar_pelanggaran_siswa.this, CariActivity.class);
+        Intent intent = new Intent(daftar_pelanggaran_siswa.this, daftar_pelanggaran_siswa.class);
         intent.putExtra("nama", cari);
         startActivity(intent);
     }

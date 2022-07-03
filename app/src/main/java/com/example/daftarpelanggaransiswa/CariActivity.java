@@ -59,7 +59,7 @@ public class CariActivity extends AppCompatActivity {
             Bundle b = i.getExtras();
             String nama = (String) b.get("nama");
             Log.d("Nama = ", nama);
-            String urlCari= "http://192.168.252.29/DataPelanggaran/cari.php?nama=" + nama;
+            String urlCari= "http://192.168.140.29/DataPelanggaran/cari.php?nama=" + nama;
             URL url=new URL(urlCari);
             HttpURLConnection con =(HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
@@ -141,7 +141,7 @@ public class CariActivity extends AppCompatActivity {
         try {
             cari = txtcari2.getText().toString();
             Log.d("Cari = ", cari);
-            String urlcari = "http://192.168.252.29/DataPelanggaran/login.php?nama=" + cari;
+            String urlcari = "http://192.168.140.29/DataPelanggaran/login.php?nama=" + cari;
             URL url = new URL(urlcari);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");

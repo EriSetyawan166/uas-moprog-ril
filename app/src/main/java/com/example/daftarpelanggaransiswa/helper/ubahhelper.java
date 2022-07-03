@@ -44,7 +44,7 @@ public class ubahhelper extends AsyncTask <String, Void, String> {
             Log.d("Jenpel = ", jenpel);
             String ket = (String) arg[4];
 
-            String link = "http://192.168.252.29/DataPelanggaran/ubah.php?nis=" + nis + "&nama=" + URLEncoder.encode(nama, "utf-8") + "&jenpel=" + URLEncoder.encode(jenpel, "utf-8") + "&keterangan=" + URLEncoder.encode(ket,"utf-8") + "&id=" + id;
+            String link = "http://192.168.140.29/DataPelanggaran/ubah.php?nis=" + nis + "&nama=" + URLEncoder.encode(nama, "utf-8") + "&jenpel=" + URLEncoder.encode(jenpel, "utf-8") + "&keterangan=" + URLEncoder.encode(ket,"utf-8") + "&id=" + id;
             Log.d("url =", link.toString());
             HttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet();
